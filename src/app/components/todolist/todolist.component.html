@@ -1,4 +1,6 @@
-<ul class="list-none w-[100%] flex flex-col mt-4 xs:pl-[15%] xs:pr-[15%]">
+<ul
+  class="list-none w-[100%] flex flex-col mt-4 xs:pl-[15%] xs:pr-[15%] lg:pr-[30%] lg:pl-[30%]"
+>
   @for(item of isActiveFilter() ? filteredTasks() : tasks(); track $index; let
   first = $first; let index = $index;) {
   <app-todoitem [item]="item" [index]="$index" [first]="first" />
