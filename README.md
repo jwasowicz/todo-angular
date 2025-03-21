@@ -21,7 +21,7 @@ Design as recommended has been adapted for screens with a maximum of 1440px
 
 ## Link
 
-`https://simpletodoschallenge.netlify.app/`
+https://simpletodoschallenge.netlify.app/
 
 ## Installation
 
