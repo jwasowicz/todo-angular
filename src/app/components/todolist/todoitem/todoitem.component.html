@@ -1,0 +1,29 @@
+<li
+  class="bg-[hsl(0_0%_98%)] dark:bg-very-dark-desaturated-blue flex items-center justify-between p-4 border-b-1 border-light-grayish-blue text-[0.8rem] text-dark-grayish-blue"
+  [ngClass]="{ 'rounded-t-[0.5rem]': first() }"
+>
+  <div class="flex items-center gap-2">
+    <button
+      class="w-6 h-6 p-1 rounded-[50%] flex justify-center items-center border-[hsl(236_33%_92%)] dark:border-very-dark-grayish-blue-alt border-1"
+      (click)="handleCompleteTask(index())"
+    >
+      @if(item().completed) {<img
+        class="brightness-0 invert-0 dark:brightness-100"
+        src="./assets/icon-check.svg"
+        alt="check"
+      />}
+    </button>
+    <span [ngClass]="{ 'line-through': item().completed }">
+      {{ item().name }}
+    </span>
+  </div>
+
+  <div class="p-2">
+    <img
+      class="w-3 h-3"
+      (click)="handleRemove(index())"
+      src="./assets/icon-cross.svg"
+      alt="cross"
+    />
+  </div>
+</li>

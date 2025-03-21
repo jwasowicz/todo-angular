@@ -1,0 +1,27 @@
+<div
+  class="bg-[hsl(0_0%_98%)] dark:bg-very-dark-desaturated-blue flex p-4 mt-10 rounded-[0.3rem] xs:mt-[7%] xs:ml-[15%] xs:mr-[15%]"
+>
+  <div class="flex justify-start items-center gap-2 w-[100%]">
+    <button
+      class="w-6 h-6 p-1 outline-0 rounded-[50%] flex items-center justify-center border-[hsl(236_33%_92%)] dark:border-very-dark-grayish-blue-alt border-1"
+      (click)="handleClick()"
+    >
+      @if(isCompleted()) {<img
+        class="brightness-0 invert-0 dark:brightness-100"
+        src="./assets/icon-check.svg"
+        alt="check"
+      />}
+    </button>
+    <form
+      (ngSubmit)="handleSubmit(isCompleted(), inputText.value)"
+      class="flex items-center w-[100%]"
+    >
+      <input
+        type="text"
+        #inputText
+        class="outline-0 border-0 text-[0.7rem] w-[100%] xs:text-[1rem] text-very-dark-desaturated-blue dark:text-light-grayish-blue"
+        placeholder="Create a new todo..."
+      />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<ul class="list-none w-[100%] flex flex-col mt-4 xs:pl-[15%] xs:pr-[15%]">
+  @for(item of isActiveFilter() ? filteredTasks() : tasks(); track $index; let
+  first = $first; let index = $index;) {
+  <app-todoitem [item]="item" [index]="$index" [first]="first" />
+  } @if(tasks().length) {
+  <li
+    class="bg-[hsl(0_0%_98%)] dark:bg-very-dark-desaturated-blue flex items-center justify-between p-4 rounded-b-[0.3rem] border-light-grayish-blue text-[0.8rem] text-dark-grayish-blue"
+  >
+    {{ getNonCompletedTasksLength }} items left
+    <button (click)="clearCompleted()">Clear Completed</button>
+  </li>
+  }
+</ul>
