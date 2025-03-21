@@ -15,6 +15,10 @@ This is a simple TODO application built as part of a challenge from [Frontend Me
 
 The main goal of this project was to practice working with Tailwind and Angular by implementing a fully functional, clean and responsive TODO app based on a Frontend Mentor challenge.
 
+## Note
+
+Design as recommended has been adapted for screens with a maximum of 1440px
+
 ## Installation
 
 1. **Clone the repository:**
